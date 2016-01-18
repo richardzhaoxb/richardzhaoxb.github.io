@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo,NexT," />
+  <meta name="keywords" content="Node.js,Utility," />
 
 
 
@@ -53,19 +53,19 @@
 
 
 
-<meta name="description" content="终于把博客搭好了。在这里把整个过程的大致步骤记录下来，供以后改造升级时参考。
-选型从开始决定要重新开始写博客时，就一直在考虑用什么来写博客。作为新时期有理想有节操的IT狗，肯定是要自己动手搭建才能体现出不同的逼格。另外一个要考虑的就是节约点成本。那第一个知道的就是 WordPress，是在比较传统的 LAMP 技术上搭建的，功能很丰富，有很多成熟漂亮的主题可以直接用。但是对于我来说，WP 太庞大，">
+<meta name="description" content="一个 Node.js 版本不够用？本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令react-native init helloworld时报错，说我本机的 Node.js 版本是 0.12，版本太低了。
+我之前装 node 0.12，就是被当时 node.js 和 io.js 的乱局吓到了，保守选了一个 io.js 之前那的稳定">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo + GitHub Pages 搭建免费的静态博客">
-<meta property="og:url" content="http://yoursite.com/2016/01/11/hexo-setup-base/index.html">
+<meta property="og:title" content="Node.js 切换版本工具 - nvm">
+<meta property="og:url" content="http://yoursite.com/2016/01/18/nodejs-switch-version/index.html">
 <meta property="og:site_name" content="晓然以至道">
-<meta property="og:description" content="终于把博客搭好了。在这里把整个过程的大致步骤记录下来，供以后改造升级时参考。
-选型从开始决定要重新开始写博客时，就一直在考虑用什么来写博客。作为新时期有理想有节操的IT狗，肯定是要自己动手搭建才能体现出不同的逼格。另外一个要考虑的就是节约点成本。那第一个知道的就是 WordPress，是在比较传统的 LAMP 技术上搭建的，功能很丰富，有很多成熟漂亮的主题可以直接用。但是对于我来说，WP 太庞大，">
-<meta property="og:updated_time" content="2016-01-14T02:47:27.000Z">
+<meta property="og:description" content="一个 Node.js 版本不够用？本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令react-native init helloworld时报错，说我本机的 Node.js 版本是 0.12，版本太低了。
+我之前装 node 0.12，就是被当时 node.js 和 io.js 的乱局吓到了，保守选了一个 io.js 之前那的稳定">
+<meta property="og:updated_time" content="2016-01-18T05:57:42.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo + GitHub Pages 搭建免费的静态博客">
-<meta name="twitter:description" content="终于把博客搭好了。在这里把整个过程的大致步骤记录下来，供以后改造升级时参考。
-选型从开始决定要重新开始写博客时，就一直在考虑用什么来写博客。作为新时期有理想有节操的IT狗，肯定是要自己动手搭建才能体现出不同的逼格。另外一个要考虑的就是节约点成本。那第一个知道的就是 WordPress，是在比较传统的 LAMP 技术上搭建的，功能很丰富，有很多成熟漂亮的主题可以直接用。但是对于我来说，WP 太庞大，">
+<meta name="twitter:title" content="Node.js 切换版本工具 - nvm">
+<meta name="twitter:description" content="一个 Node.js 版本不够用？本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令react-native init helloworld时报错，说我本机的 Node.js 版本是 0.12，版本太低了。
+我之前装 node 0.12，就是被当时 node.js 和 io.js 的乱局吓到了，保守选了一个 io.js 之前那的稳定">
 
 
 
@@ -77,7 +77,7 @@
   };
 </script>
 
-  <title> Hexo + GitHub Pages 搭建免费的静态博客 | 晓然以至道 </title>
+  <title> Node.js 切换版本工具 - nvm | 晓然以至道 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -227,7 +227,7 @@
             
             
               
-                Hexo + GitHub Pages 搭建免费的静态博客
+                Node.js 切换版本工具 - nvm
               
             
           </h1>
@@ -236,8 +236,8 @@
         <div class="post-meta">
           <span class="post-time">
             发表于
-            <time itemprop="dateCreated" datetime="2016-01-11T00:31:46+08:00" content="2016-01-11">
-              2016-01-11
+            <time itemprop="dateCreated" datetime="2016-01-18T11:45:23+08:00" content="2016-01-18">
+              2016-01-18
             </time>
           </span>
 
@@ -246,8 +246,8 @@
               &nbsp; | &nbsp; 分类于
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/博客/" itemprop="url" rel="index">
-                    <span itemprop="name">博客</span>
+                  <a href="/categories/开发/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
                   </a>
                 </span>
 
@@ -262,8 +262,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/01/11/hexo-setup-base/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/11/hexo-setup-base/" itemprop="commentsCount"></span>
+                <a href="/2016/01/18/nodejs-switch-version/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/18/nodejs-switch-version/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -282,38 +282,24 @@
       
 
       
-        <span itemprop="articleBody"><p>终于把博客搭好了。在这里把整个过程的大致步骤记录下来，供以后改造升级时参考。</p>
-<h1 id="u9009_u578B"><a href="#u9009_u578B" class="headerlink" title="选型"></a>选型</h1><p>从开始决定要重新开始写博客时，就一直在考虑用什么来写博客。作为新时期有理想有节操的IT狗，肯定是要自己动手搭建才能体现出不同的逼格。另外一个要考虑的就是节约点成本。那第一个知道的就是 WordPress，是在比较传统的 LAMP 技术上搭建的，功能很丰富，有很多成熟漂亮的主题可以直接用。但是对于我来说，WP 太庞大，太过臃肿。另外一个目前比较流行的是用 Jekyll 在 GitHub 上写 Markdown 然后生成静态页面，还有它的表哥 Octopress，号称是想黑客一样写博客。其实是不错的选择，毕竟把静态页面放在 GitHub 上既稳定又不用花钱。不过由于 Jekyll 是基于 Ruby 技术栈的，我对 Ruby 不熟悉又暂时不打算学习 Ruby（听说性能有问题），所以迟迟没有动手去弄。前几天看到一个新的博客平台Ghost，它是基于 Node.js 基础上搭建的，听说是要成为 WP 的继任者，所以就下下来试了一下，确实是比较简单，很快就安装好了，和 Jekyll 一样，Ghost 也是用 Markdown 来写作的，而且 Ghost 还支持一边用 Markdown 写作，一边就可以看到生成文章的效果。但是有两点最后导致我暂时放弃了 Ghost，(1)就是 Ghost 刚出来，版本很不稳定，而且在社区中还没有太多的插件和主题供选择；(2)就是它需要我们自己部署到一个外网的服务器上才能访问。 后来我就在想有没有结合了 Jekyll 和 Ghost 的优势，即用 Node.js 技术做 Markdown 的生成静态页面部署到 GitHub 上去呢？到网上一找，最后找到了 Hexo。有种相见恨晚的感觉。Hexo 是由台湾的 <a href="https://github.com/hexojs/hexo" target="_blank" rel="external">tommy351</a> 开发的一款基于Node.js的静态博客框架。它支持用 支持GitHub Flavored Markdown 写作，因为基于 Node.js 运行，生成静态网页数据的速度极快，而且配合 Node.js 的生态，开发网页模板、定制主题、及开发插件都很方便。</p>
-<h1 id="u73AF_u5883_u51C6_u5907"><a href="#u73AF_u5883_u51C6_u5907" class="headerlink" title="环境准备"></a>环境准备</h1><p>在安装使用 Hexo 之前，需要先安装一下软件：</p>
-<ul>
-<li>Node.js</li>
-<li>Git</li>
-</ul>
-<p>安装的方式网上都有，这里就不赘述了。</p>
-<h1 id="u5EFA_u7ACB_u81EA_u5DF1_u7684_GitHub__u9759_u6001_u7AD9"><a href="#u5EFA_u7ACB_u81EA_u5DF1_u7684_GitHub__u9759_u6001_u7AD9" class="headerlink" title="建立自己的 GitHub 静态站"></a>建立自己的 GitHub 静态站</h1><p>GitHub 真是一个好东西，不但为开源世界提供了优质的资源，还给我们这种屌丝提供了免费的、稳定的静态站点服务。</p>
-<p>登录 GitHub，创建一个新的仓库，仓库的名字必须为你的 GitHub 的账户名开头，加上 github.io 为后缀，我的静态站仓库就是：richardzhaoxb.github.io</p>
-<h1 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h1><p>如果前面 Node.js 和 Git 都安装好了，安装 Hexo 就是超级简单，比 Jekyll 的简单多了。执行下面的命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br></pre></td></tr></table></figure>
-<h1 id="u521D_u59CB_u5316"><a href="#u521D_u59CB_u5316" class="headerlink" title="初始化"></a>初始化</h1><p>初始化就是生成一个 blog 的实例，还是很简单，执行下面的命名，指定要生成的目录：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br></pre></td></tr></table></figure>
-<p>你可以在自己的机器上生成多个不同的实例，用于开发插件、测试主题、或者只为备份，随你。只要每次别进错目录就好。</p>
-<h1 id="u5199_u6587_u7AE0"><a href="#u5199_u6587_u7AE0" class="headerlink" title="写文章"></a>写文章</h1><p>还是很简单，一个命令，指定要生成的文章的名字：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new &lt;post-name&gt;</span><br></pre></td></tr></table></figure>
-<p>这个命令其实是在博客的根目录的 <strong>/source/_posts/</strong> 子目录下，生成了 post-name.md 的文件。如果知道了这一点，其实也可以复制<strong>_posts</strong>目录下的其他md文件来创建新文章。</p>
-<p>接下来，就可以用 Markdown 在新生成的文件中写博客了。我用的是 Sublime Text，还装了一个叫做 MarkdownEditing 的插件，写起来很爽。</p>
-<h1 id="u672C_u5730_u9884_u89C8"><a href="#u672C_u5730_u9884_u89C8" class="headerlink" title="本地预览"></a>本地预览</h1><p>执行以下命令，就可以启动 Node.js 本地服务，进行文章的预览调试。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>默认的调试地址是：<a href="http://localhost:4000，也可以用" target="_blank" rel="external">http://localhost:4000，也可以用</a> -p 的命令参数指定端口号。</p>
-<h1 id="u751F_u6210_u9759_u6001_u9875_u9762"><a href="#u751F_u6210_u9759_u6001_u9875_u9762" class="headerlink" title="生成静态页面"></a>生成静态页面</h1><p>如果本地调试好了，准备发布到 GitHub 上去，就必须先生成静态页面。在博客的根目录下，执行如下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br></pre></td></tr></table></figure>
-<h1 id="u53D1_u5E03_u5230_GitHub"><a href="#u53D1_u5E03_u5230_GitHub" class="headerlink" title="发布到 GitHub"></a>发布到 GitHub</h1><p>先到站点配置文件中，修改git库信息</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Deployment</span></span><br><span class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></span><br><span class="line"><span class="symbol">deploy:</span></span><br><span class="line">  <span class="symbol">type:</span> git</span><br><span class="line">  <span class="symbol">repo:</span> git<span class="variable">@github</span>.<span class="symbol">com:</span>richardzhaoxb/richardzhaoxb.github.io.git</span><br></pre></td></tr></table></figure>
-<p>然后安装 Hexo 在 git 上部署的插件：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-<p>最后就可以执行命令发布了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
-<p>Hexo 还支持发布到不同的 静态 Pages 平台：Heroku、Rsync、OpenShift， 做法和上面类似，在不同的地方修改参数即可，具体参考<a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">官网的说明</a> 。</p>
-<h1 id="u4E3B_u9898"><a href="#u4E3B_u9898" class="headerlink" title="主题"></a>主题</h1><p>在 Hexo 官网上的主题推荐中，看中了 NeXT 主题。这个 Theme 简洁，突出内容，而且 NeXT 主题还有一个专门的 <a href="http://theme-next.iissnan.com/" target="_blank" rel="external">主页</a> 来介绍具体的使用。按照上面的一步一步做即可。感谢 <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">iissnan</a> 提供这么优秀的主题。</p>
+        <span itemprop="articleBody"><h3 id="u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F"><a href="#u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F" class="headerlink" title="一个 Node.js 版本不够用？"></a>一个 Node.js 版本不够用？</h3><p>本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令<code>react-native init helloworld</code>时报错，说我本机的 Node.js 版本是 0.12，版本太低了。</p>
+<p>我之前装 node 0.12，就是被当时 node.js 和 io.js 的乱局吓到了，保守选了一个 io.js 之前那的稳定版本。如今已经基于 node 0.12 之上做了一些项目，不能随便升级版本。 虽然官方宣称 node 4.0+ 是支持之前的版本的，但是生产环境已经使用了 0.12 版本，就不要去冒险了。</p>
+<p>怎么办，一个机器上能否有多个版本的node环境呢？我在网上找到了 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a> , 它就是用来解决这个问题的。</p>
+<h3 id="u5B89_u88C5_nvm"><a href="#u5B89_u88C5_nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h3><p>安装很简单，按照官网的介绍就一个脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">30.1</span>/install.sh | bash</span><br></pre></td></tr></table></figure>
+<p>然后把终端重新打开就可以使用 nvm 命令了。</p>
+<h3 id="u4F7F_u7528_nvm"><a href="#u4F7F_u7528_nvm" class="headerlink" title="使用 nvm"></a>使用 nvm</h3><p>例如，我要安装最新的 5.4.x 版本，就可以执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install <span class="number">5.4</span></span><br></pre></td></tr></table></figure>
+<p>瞬间就安装完了，而且 nvm 默认会把刚安装好的 node.js 版本作为当前环境使用的版本。注意系统默认的版本还是之前安装的 0.12.4 ，只是当前运行环境的被盖了，执行下面的命令参看当前环境使用的 nodejs 版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
+<p>可以使用下面的命令，切换 node.js 环境：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use <span class="number">5.4</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>切换到之前系统安装的 node，就用 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use system</span><br></pre></td></tr></table></figure>
+<p>参看已经安装了的node环境可以用命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
+<p>其他用法参考 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm 的官网</a> 。</p>
+<p>现在可以愉快的用新版本 nodejs 开发 React Native了。</p>
 </span>
       
     </div>
@@ -322,9 +308,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag">#Hexo</a>
+            <a href="/tags/Node-js/" rel="tag">#Node.js</a>
           
-            <a href="/tags/NexT/" rel="tag">#NexT</a>
+            <a href="/tags/Utility/" rel="tag">#Utility</a>
           
         </div>
       
@@ -333,17 +319,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/06/blog-restart/" rel="next" title="博客 - 重新开始">
-                <i class="fa fa-chevron-left"></i> 博客 - 重新开始
+              <a href="/2016/01/13/hexo-config-ext/" rel="next" title="Hexo 配置修改及安装扩展">
+                <i class="fa fa-chevron-left"></i> Hexo 配置修改及安装扩展
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/13/hexo-config-ext/" rel="prev" title="Hexo 配置修改及安装扩展">
-                Hexo 配置修改及安装扩展 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -358,10 +340,10 @@
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/01/11/hexo-setup-base/"
-     data-title="Hexo + GitHub Pages 搭建免费的静态博客"
+        <div class="ds-share flat" data-thread-key="2016/01/18/nodejs-switch-version/"
+     data-title="Node.js 切换版本工具 - nvm"
      data-content=""
-     data-url="http://yoursite.com/2016/01/11/hexo-setup-base/">
+     data-url="http://yoursite.com/2016/01/18/nodejs-switch-version/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -389,8 +371,8 @@
         
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/01/11/hexo-setup-base/"
-           data-title="Hexo + GitHub Pages 搭建免费的静态博客" data-url="http://yoursite.com/2016/01/11/hexo-setup-base/">
+      <div class="ds-thread" data-thread-key="2016/01/18/nodejs-switch-version/"
+           data-title="Node.js 切换版本工具 - nvm" data-url="http://yoursite.com/2016/01/18/nodejs-switch-version/">
       </div>
     
   </div>
@@ -546,7 +528,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u9009_u578B"><span class="nav-number">1.</span> <span class="nav-text">选型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u73AF_u5883_u51C6_u5907"><span class="nav-number">2.</span> <span class="nav-text">环境准备</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5EFA_u7ACB_u81EA_u5DF1_u7684_GitHub__u9759_u6001_u7AD9"><span class="nav-number">3.</span> <span class="nav-text">建立自己的 GitHub 静态站</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5B89_u88C5"><span class="nav-number">4.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u521D_u59CB_u5316"><span class="nav-number">5.</span> <span class="nav-text">初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5199_u6587_u7AE0"><span class="nav-number">6.</span> <span class="nav-text">写文章</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u672C_u5730_u9884_u89C8"><span class="nav-number">7.</span> <span class="nav-text">本地预览</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u751F_u6210_u9759_u6001_u9875_u9762"><span class="nav-number">8.</span> <span class="nav-text">生成静态页面</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u53D1_u5E03_u5230_GitHub"><span class="nav-number">9.</span> <span class="nav-text">发布到 GitHub</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u4E3B_u9898"><span class="nav-number">10.</span> <span class="nav-text">主题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F"><span class="nav-number">1.</span> <span class="nav-text">一个 Node.js 版本不够用？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5B89_u88C5_nvm"><span class="nav-number">2.</span> <span class="nav-text">安装 nvm</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528_nvm"><span class="nav-number">3.</span> <span class="nav-text">使用 nvm</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[坚持学习，勤于思考]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-14T02:26:15.000Z</updated>
+  <updated>2016-01-18T05:57:42.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Node.js 切换版本工具 - nvm]]></title>
+    <link href="http://yoursite.com/2016/01/18/nodejs-switch-version/"/>
+    <id>http://yoursite.com/2016/01/18/nodejs-switch-version/</id>
+    <published>2016-01-18T03:45:23.000Z</published>
+    <updated>2016-01-18T05:57:42.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F"><a href="#u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F" class="headerlink" title="一个 Node.js 版本不够用？"></a>一个 Node.js 版本不够用？</h3><p>本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令<code>react-native init helloworld</code>时报错，说我本机的 Node.js 版本是 0.12，版本太低了。</p>
+<p>我之前装 node 0.12，就是被当时 node.js 和 io.js 的乱局吓到了，保守选了一个 io.js 之前那的稳定版本。如今已经基于 node 0.12 之上做了一些项目，不能随便升级版本。 虽然官方宣称 node 4.0+ 是支持之前的版本的，但是生产环境已经使用了 0.12 版本，就不要去冒险了。</p>
+<p>怎么办，一个机器上能否有多个版本的node环境呢？我在网上找到了 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm</a> , 它就是用来解决这个问题的。</p>
+<h3 id="u5B89_u88C5_nvm"><a href="#u5B89_u88C5_nvm" class="headerlink" title="安装 nvm"></a>安装 nvm</h3><p>安装很简单，按照官网的介绍就一个脚本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.<span class="number">30.1</span>/install.sh | bash</span><br></pre></td></tr></table></figure>
+<p>然后把终端重新打开就可以使用 nvm 命令了。</p>
+<h3 id="u4F7F_u7528_nvm"><a href="#u4F7F_u7528_nvm" class="headerlink" title="使用 nvm"></a>使用 nvm</h3><p>例如，我要安装最新的 5.4.x 版本，就可以执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install <span class="number">5.4</span></span><br></pre></td></tr></table></figure>
+<p>瞬间就安装完了，而且 nvm 默认会把刚安装好的 node.js 版本作为当前环境使用的版本。注意系统默认的版本还是之前安装的 0.12.4 ，只是当前运行环境的被盖了，执行下面的命令参看当前环境使用的 nodejs 版本：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
+<p>可以使用下面的命令，切换 node.js 环境：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use <span class="number">5.4</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>切换到之前系统安装的 node，就用 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use system</span><br></pre></td></tr></table></figure>
+<p>参看已经安装了的node环境可以用命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
+<p>其他用法参考 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm 的官网</a> 。</p>
+<p>现在可以愉快的用新版本 nodejs 开发 React Native了。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F"><a href="#u4E00_u4E2A_Node-js__u7248_u672C_u4E0D_u591F_u7528_uFF1F" class=]]>
+    </summary>
+    
+      <category term="Node.js" scheme="http://yoursite.com/tags/Node-js/"/>
+    
+      <category term="Utility" scheme="http://yoursite.com/tags/Utility/"/>
+    
+      <category term="开发" scheme="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Hexo 配置修改及安装扩展]]></title>
