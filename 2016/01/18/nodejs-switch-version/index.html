@@ -61,7 +61,7 @@
 <meta property="og:site_name" content="晓然以至道">
 <meta property="og:description" content="一个 Node.js 版本不够用？本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令react-native init helloworld时报错，说我本机的 Node.js 版本是 0.12，版本太低了。
 我之前装 node 0.12，就是被当时 node.js 和 io.js 的乱局吓到了，保守选了一个 io.js 之前那的稳定">
-<meta property="og:updated_time" content="2016-01-18T05:57:42.000Z">
+<meta property="og:updated_time" content="2016-01-19T02:19:38.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Node.js 切换版本工具 - nvm">
 <meta name="twitter:description" content="一个 Node.js 版本不够用？本来周末想要学习一下 React Native，做一个 helloworld 出来体验一下。第一步就被阻，初始化命令react-native init helloworld时报错，说我本机的 Node.js 版本是 0.12，版本太低了。
@@ -294,12 +294,15 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm current</span><br></pre></td></tr></table></figure>
 <p>可以使用下面的命令，切换 node.js 环境：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use <span class="number">5.4</span>.<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>但是这个命令只会影响当前命令行，如果要想让系统每打开一个命令行就使用 5.4.1 版本，就在 切换到 5.4.1 后再执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm <span class="built_in">alias</span> default node</span><br></pre></td></tr></table></figure>
 <p>切换到之前系统安装的 node，就用 </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm use system</span><br></pre></td></tr></table></figure>
 <p>参看已经安装了的node环境可以用命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm ls</span><br></pre></td></tr></table></figure>
 <p>其他用法参考 <a href="https://github.com/creationix/nvm" target="_blank" rel="external">nvm 的官网</a> 。</p>
 <p>现在可以愉快的用新版本 nodejs 开发 React Native了。</p>
+<p>忘了说了，上面的做法只适合 Mac 。 目前 nvm 对 Windows 好像支持不是很完美，可能以后会慢慢改进， Windows上的 nodejs 开发者请自救。</p>
 </span>
       
     </div>
@@ -326,6 +329,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/19/js-pro-01-history/" rel="prev" title="JavaScript 的历史">
+                JavaScript 的历史 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -416,7 +423,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">8</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -430,7 +437,7 @@
 
           <div class="site-state-item site-state-tags">
             <a href="/tags">
-              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-count">6</span>
               <span class="site-state-item-name">标签</span>
               </a>
           </div>
